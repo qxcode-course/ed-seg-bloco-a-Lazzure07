@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-07_19-45-47",
+            "content": "@@ -159,17 +159,16 @@\n mt.Scan(\n-&\n nPartici\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-07_19-47-46",
+            "content": "@@ -400,24 +400,8 @@\n  v%7B%0A\n-            i++%0A\n     \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-07_19-49-00",
+            "content": "@@ -258,97 +258,8 @@\n aB)%0A\n-        if pedraA %3C 10 %7C%7C pedraB %3C 10%7B%0A            slice = append(slice, 100))%0A        %7D%0A\n     \n@@ -350,78 +350,8 @@\n ce)%0A\n-    if min == 100%7B%0A        fmt.Println(%22sem ganhador%22)%0A    %7Delse%7B%0A    \n     \n@@ -383,20 +383,16 @@\n         \n-   \n- \n if min =\n@@ -408,20 +408,16 @@\n         \n-    \n i++%0A    \n@@ -420,28 +420,24 @@\n             \n- \n-   \n fmt.Println(\n@@ -443,22 +443,8 @@\n (i)%0A\n-            %7D%0A\n     \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-07_19-55-46",
+            "content": "@@ -331,16 +331,17 @@\n ce, 100)\n+)\n %0A       \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-07_19-55-56",
+            "content": "@@ -336,29 +336,8 @@\n 00)%0A\n-            continue%0A\n     \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-07_19-56-35",
+            "content": "@@ -579,16 +579,36 @@\n n == v%7B%0A\n+                i++%0A\n         \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-07_19-57-10",
+            "content": "package main\nimport \"fmt\"\nimport \"math\"\nimport \"slices\"\nfunc main() {\n    var nParticipantes int\n    var pedraA, pedraB float64\n    var slice []float64\n\n    fmt.Scan(&nParticipantes)\n\n    for i := 1; i <= nParticipantes; i++{\n        fmt.Scan(&pedraA, &pedraB)\n        if pedraA < 10 || pedraB < 10{\n            slice = append(slice, 100)\n            continue\n        }\n        slice = append(slice, math.Abs(pedraA - pedraB))\n    }\n    min := slices.Min(slice)\n    if min == 100{\n        fmt.Println(\"sem ganhador\")\n    }else{\n        for i, v := range slice{\n            if min == v{\n                fmt.Println(i)\n            }\n        }\n    }\n}\n",
+            "lines": "30"
+        }
+    ]
+}

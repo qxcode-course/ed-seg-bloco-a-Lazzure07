@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-07_19-14-48",
+            "content": "@@ -333,32 +333,49 @@\n           break%0A\n+                %0A\n             %7D%0A  \n@@ -468,38 +468,16 @@\n ln(%22N%22)%0A\n-                break%0A\n         \n@@ -543,38 +543,16 @@\n ln(%22S%22)%0A\n-                break%0A\n         \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-07_19-15-25",
+            "content": "@@ -598,60 +598,8 @@\n   %7D%0A\n-        if fug == 16%7B%0A            fug = 0%0A        %7D%0A\n     \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-04-07_19-16-52",
+            "content": "@@ -650,61 +650,8 @@\n   %7D%0A\n-        if fug == -1%7B%0A            fug = 15%0A        %7D%0A\n     \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-07_19-17-26",
+            "content": "@@ -124,113 +124,8 @@\n or%7B%0A\n-        if fug == 16%7B%0A            fug = 0%0A        %7D%0A        if fug == -1%7B%0A            fug = 15%0A        %7D%0A\n     \n@@ -590,22 +590,127 @@\n %7D%0A        %7D%0A\n+        if fug == 16%7B%0A            fug = 0%0A        %7D%0A        if fug == -1%7B%0A            fug = 15%0A        %7D%0A\n     %7D%0A%0A%0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-07_19-21-10",
+            "content": "@@ -246,16 +246,34 @@\n r == 1%7B%0A\n+            fug++%0A\n         \n@@ -468,34 +468,35 @@\n         \n-    fug++%0A\n+%7Delse%7B%0A    \n         \n %7Delse%7B%0A \n@@ -479,38 +479,37 @@\n se%7B%0A            \n-%7Delse%7B\n+fug--\n %0A            if \n@@ -689,34 +689,16 @@\n       %7D%0A\n-            fug--%0A\n         \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-07_19-23-26",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var heli, police, fug, dir int\n\n    fmt.Scan(&heli, &police, &fug, &dir)\n\n    for{\n        if fug == 16{\n            fug = 0\n        }\n        if fug == -1{\n            fug = 15\n        }\n        if dir == 1{\n            if fug == police{\n                fmt.Println(\"N\")\n                break\n            }\n            if fug == heli{\n                fmt.Println(\"S\")\n                break\n            }\n            fug++\n        }else{\n            if fug == police{\n                fmt.Println(\"N\")\n                break\n            }\n            if fug == heli{\n                fmt.Println(\"S\")\n                break\n            }\n            fug--\n        }\n    }\n\n\n}\n",
+            "lines": "39"
+        }
+    ]
+}
