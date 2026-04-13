@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-13_19-29-27",
+            "content": "@@ -120,58 +120,8 @@\n int%0A\n-    var sliceFalta %5B%5Dint%0A    var verificador bool%0A\n %0A%0A  \n@@ -596,889 +596,29 @@\n    f\n-or j := 1; j%3C=numAlb; j++%7B%0A        verificador = false%0A        for  i := 0; i%3Clen(sliceBaruel); i++%7B%0A%0A            if sliceBaruel%5Bi%5D == j%7B%0A                verificador = true%0A                break%0A            %7D%0A        %7D%0A        if !verificador%7B%0A            sliceFalta = append(sliceFalta, j)%0A        %7D%0A    %7D%0A%0A    if sliceRepet == nil%7B%0A        fmt.Println(%22N%22)%0A    %7Delse%7B%0A        for i, v := range sliceRepet%7B%0A            if i == len(sliceRepet)-1%7B%0A                fmt.Printf(%22%25d%22, v)%0A                break%0A            %7D %0A            fmt.Printf(%22%25d %22, v)%0A        %7D%0A        fmt.Printf(%22%5Cn%22)%0A    %7D%0A%0A    if sliceFalta == nil%7B%0A        fmt.Println(%22N%22)%0A    %7Delse%7B%0A        for i, v := range sliceFalta%7B%0A            if i == len(sliceRepet)-1%7B%0A                fmt.Printf(%22%25d%22, v)%0A                break%0A            %7D %0A            fmt.Printf(%22%25d %22, v)%0A        %7D%0A        fmt.Printf(%22%5Cn%22)%0A%0A    %7D%0A\n+mt.Println(sliceRepet)\n %0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-13_19-52-55",
+            "content": "@@ -1366,21 +1366,21 @@\n en(slice\n-Falta\n+Repet\n )-1%7B%0A   \n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-04-13_19-53-29",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var numFig, numAlb, fig int\n    var sliceBaruel []int\n    var sliceRepet []int\n    var sliceFalta []int\n    var verificador bool\n\n\n    fmt.Scan(&numAlb, &numFig)\n    for i:= 0; i < numFig; i++{\n        fmt.Scan(&fig)\n        sliceBaruel = append(sliceBaruel, fig)\n    }\n\n    for i:= 0; i<len(sliceBaruel); i++{\n        for j := i +1; j<len(sliceBaruel); j++{\n            if(sliceBaruel[i] == sliceBaruel[j]){\n                sliceRepet = append(sliceRepet, sliceBaruel[j])\n                sliceBaruel = append(sliceBaruel[:j], sliceBaruel[j+1:]...)\n                j--\n            }\n        }\n    }\n\n    for j := 1; j<=numAlb; j++{\n        verificador = false\n        for  i := 0; i<len(sliceBaruel); i++{\n\n            if sliceBaruel[i] == j{\n                verificador = true\n                break\n            }\n        }\n        if !verificador{\n            sliceFalta = append(sliceFalta, j)\n        }\n    }\n\n    if sliceRepet == nil{\n        fmt.Println(\"N\")\n    }else{\n        for i, v := range sliceRepet{\n            if i == len(sliceRepet)-1{\n                fmt.Printf(\"%d\", v)\n                break\n            } \n            fmt.Printf(\"%d \", v)\n        }\n        fmt.Printf(\"\\n\")\n    }\n\n    if sliceFalta == nil{\n        fmt.Println(\"N\")\n    }else{\n        for i, v := range sliceFalta{\n            if i == len(sliceFalta)-1{\n                fmt.Printf(\"%d\", v)\n                break\n            } \n            fmt.Printf(\"%d \", v)\n        }\n        fmt.Printf(\"\\n\")\n\n    }\n\n}\n",
+            "lines": "68"
+        }
+    ]
+}

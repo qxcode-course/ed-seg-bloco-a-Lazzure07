@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-13_20-08-28",
+            "content": "@@ -37,402 +37,6 @@\n ) %7B%0A\n-    var numN, numM, id , idQuit int%0A    var fila %5B%5Dint%0A%0A    fmt.Scan(&numN)%0A    for i:=0; i%3CnumN; i++%7B%0A        fmt.Scan(&id)%0A        fila = append(fila, id)%0A    %7D%0A%09fmt.Scan(&numM)%0A    for i:=0; i%3CnumM; i++%7B%0A        fmt.Scan(&idQuit)%0A        for i:=0; i%3Clen(fila); i++%7B%0A%09%09%09if fila%5Bi%5D == idQuit%7B%0A                fila = append(fila%5B:i%5D, fila%5Bi+1:%5D...)%0A%09%09%09%09i--%0A%09%09%09%7D%0A%09%09%7D%0A    %7D%0A%0A    fmt.Println(fila)%0A%0A\n %7D%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-04-13_20-16-40",
+            "content": "@@ -410,143 +410,29 @@\n  %7D%0A%0A\n-%09for i, v := range fila%7B%0A%09%09if i == len(fila)-1%7B%0A%09%09    fmt.Printf(%22%25d%22, v)%0A%0A%09%09%09break%0A%09%09%7D%0A%09    fmt.Printf(%22%25d %22, v)%0A%09%7D%0A%09fmt.Printf(%22%5Cn%22)%0A\n+    fmt.Println(fila)\n %0A%0A%7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-13_20-19-42",
+            "content": "@@ -415,9 +415,9 @@\n for \n-_\n+i\n , v \n@@ -431,16 +431,79 @@\n e fila%7B%0A\n+%09%09if i == len(fila)-1%7B%0A%09%09    fmt.Printf(%22%25d%22, v)%0A%0A%09%09%09break%0A%09%09%7D%0A\n %09    fmt\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-13_20-20-49",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var numN, numM, id , idQuit int\n    var fila []int\n\n    fmt.Scan(&numN)\n    for i:=0; i<numN; i++{\n        fmt.Scan(&id)\n        fila = append(fila, id)\n    }\n\tfmt.Scan(&numM)\n    for i:=0; i<numM; i++{\n        fmt.Scan(&idQuit)\n        for i:=0; i<len(fila); i++{\n\t\t\tif fila[i] == idQuit{\n                fila = append(fila[:i], fila[i+1:]...)\n\t\t\t\ti--\n\t\t\t}\n\t\t}\n    }\n\n\tfor _, v := range fila{\n\t    fmt.Printf(\"%d \", v)\n\t}\n\tfmt.Printf(\"\\n\")\n\n\n}\n",
+            "lines": "29"
+        }
+    ]
+}

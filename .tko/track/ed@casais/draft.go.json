@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-10_16-07-29",
+            "content": "@@ -281,19 +281,15 @@\n = i+\n-1\n++\n ; j %3C \n-len(\n slic\n@@ -296,17 +296,16 @@\n eAnimais\n-)\n ; j++%7B%0A \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-10_16-09-31",
+            "content": "@@ -536,48 +536,8 @@\n a++%0A\n-                i--%0A                j--%0A\n     \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-10_16-10-27",
+            "content": "@@ -576,30 +576,8 @@\n j--%0A\n-                break%0A\n     \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-10_16-12-06",
+            "content": "@@ -572,37 +572,11 @@\n     \n-fmt.Println(%22tirei mais um%22)%0A\n+j--\n %0A   \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-10_16-28-00",
+            "content": "@@ -354,53 +354,8 @@\n 1)%7B%0A\n-                fmt.Println(sliceAnimais%5Bj%5D)%0A\n     \n@@ -433,53 +433,8 @@\n ..)%0A\n-                fmt.Println(sliceAnimais%5Bi%5D)%0A\n     \n@@ -532,16 +532,16 @@\n conta++%0A\n-\n         \n@@ -551,16 +551,61 @@\n      i--\n+%0A                fmt.Println(%22tirei mais um%22)\n %0A%0A      \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-10_16-31-30",
+            "content": "@@ -235,23 +235,21 @@\n or i\n+, v\n  := \n-0; i %3C len(\n+range \n slic\n@@ -260,14 +260,8 @@\n mais\n-); i++\n %7B%0A  \n@@ -312,38 +312,8 @@\n ++%7B%0A\n-            fmt.Println(i, j)%0A\n     \n@@ -602,51 +602,8 @@\n ..)%0A\n-                fmt.Println(sliceAnimais)%0A%0A\n     \n@@ -694,12 +694,35 @@\n  %7D%0A    %7D\n+%0A    fmt.Println(conta)\n %0A%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-10_16-42-24",
+            "content": "@@ -332,30 +332,96 @@\n     \n-if sliceAnimais%5Bj%5D == \n+fmt.Println(i, j)%0A            if sliceAnimais%5Bj%5D == v*(-1)%7B%0A                fmt.Println(\n slic\n@@ -433,16 +433,11 @@\n ais%5B\n-i%5D*(-1)%7B\n+j%5D)\n %0A   \n@@ -504,32 +504,77 @@\n imais%5Bj+1:%5D...)%0A\n+                fmt.Println(sliceAnimais%5Bi%5D)%0A\n                 \n@@ -628,32 +628,75 @@\n imais%5Bi+1:%5D...)%0A\n+                fmt.Println(sliceAnimais)%0A%0A\n                 \n@@ -723,16 +723,17 @@\n     i--%0A\n+%0A\n         \n@@ -774,36 +774,13 @@\n   %7D%0A\n+\n     %7D\n-%0A    fmt.Println(conta)\n %0A%0A%7D%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-04-10_16-45-26",
+            "content": "@@ -72,16 +72,21 @@\n     var \n+slice\n Animais \n@@ -163,32 +163,37 @@\n animal)%0A        \n+slice\n Animais = append\n@@ -189,24 +189,29 @@\n is = append(\n+slice\n Animais, ani\n@@ -242,24 +242,29 @@\n  0; i %3C len(\n+slice\n Animais); i+\n@@ -296,16 +296,21 @@\n j %3C len(\n+slice\n Animais)\n@@ -331,16 +331,21 @@\n      if \n+slice\n Animais%5B\n@@ -350,16 +350,21 @@\n s%5Bj%5D == \n+slice\n Animais%5B\n@@ -380,32 +380,37 @@\n                 \n+slice\n Animais = append\n@@ -402,32 +402,37 @@\n nimais = append(\n+slice\n Animais%5B:j%5D, Ani\n@@ -428,16 +428,21 @@\n is%5B:j%5D, \n+slice\n Animais%5B\n@@ -467,16 +467,21 @@\n         \n+slice\n Animais \n@@ -489,16 +489,21 @@\n  append(\n+slice\n Animais%5B\n@@ -507,16 +507,21 @@\n is%5B:i%5D, \n+slice\n Animais%5B\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-13_20-03-37",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var num, animal, conta int\n    var Animais []int\n\n    fmt.Scan(&num)\n    for i:=0; i<num; i++{\n        fmt.Scan(&animal)\n        Animais = append(Animais, animal)\n    }\n\n    for i := 0; i < len(Animais); i++{\n        for j := i+1; j < len(Animais); j++{\n            if Animais[j] == Animais[i]*(-1){\n                Animais = append(Animais[:j], Animais[j+1:]...)\n                Animais = append(Animais[:i], Animais[i+1:]...)\n                conta++\n                i--\n                break\n            }\n        }\n    }\n    fmt.Println(conta)\n\n}\n",
+            "lines": "26"
+        }
+    ]
+}
