@@ -1,0 +1,60 @@
+2026-05-17 19:10:18, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-05-17 19:10:23, EXEC, v:1, k:ed@gomos, mode:FREE, size:15
+2026-05-17 19:10:49, MOVE, v:1, k:ed@gomos, mode:EDIT
+2026-05-17 19:14:52, MOVE, v:1, k:ed@gomos, mode:EDIT
+2026-05-17 19:17:45, MOVE, v:1, k:ed@gomos, mode:EDIT
+2026-05-17 19:21:01, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:29
+2026-05-17 19:21:01, MOVE, v:1, k:ed@gomos, mode:EDIT
+2026-05-17 19:24:21, MOVE, v:1, k:ed@gomos, mode:EDIT
+2026-05-17 19:29:34, MOVE, v:1, k:ed@gomos, mode:EDIT
+2026-05-17 19:34:18, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:37
+2026-05-17 19:34:30, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:37
+2026-05-17 19:34:28, MOVE, v:1, k:ed@gomos, mode:EDIT
+2026-05-17 19:34:30, MOVE, v:1, k:ed@gomos, mode:EDIT
+2026-05-17 19:42:46, MOVE, v:1, k:ed@gomos, mode:EDIT
+2026-05-17 19:48:04, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:37
+2026-05-17 19:49:53, MOVE, v:1, k:ed@gomos, mode:EDIT
+2026-05-17 19:48:04, MOVE, v:1, k:ed@gomos, mode:EDIT
+2026-05-17 19:54:01, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100, size:39
+2026-05-17 19:54:09, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-05-17 19:53:59, MOVE, v:1, k:ed@gomos, mode:EDIT
+2026-05-17 19:54:01, MOVE, v:1, k:ed@gomos, mode:EDIT
+2026-05-17 19:55:15, SELF, v:1, k:ed@gomos, self:1, rate:100, study:35, concept:1
+2026-05-17 19:57:15, SELF, v:1, k:ed@fuga, self:1, study:30, concept:1
+2026-05-17 19:57:32, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-05-17 19:57:43, EXEC, v:1, k:ed@fuga, mode:FULL, rate:100
+2026-05-17 19:57:45, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-05-17 19:58:05, MOVE, v:1, k:ed@casais, mode:PICK
+2026-05-17 19:58:06, EXEC, v:1, k:ed@casais, mode:FULL, rate:100, size:26
+2026-05-17 19:58:07, MOVE, v:1, k:ed@casais, mode:BACK
+2026-05-17 19:58:31, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-05-17 19:58:39, EXEC, v:1, k:ed@baruel, mode:FULL, rate:100
+2026-05-17 19:58:43, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-05-17 19:59:19, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-05-17 19:59:26, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-05-17 19:59:29, MOVE, v:1, k:ed@apagando, mode:DOWN
+2026-05-17 19:59:30, MOVE, v:1, k:ed@manipulacao, mode:DOWN
+2026-05-17 19:59:31, MOVE, v:1, k:ed@especiais, mode:DOWN
+2026-05-17 19:59:33, MOVE, v:1, k:ed@buscas, mode:DOWN
+2026-05-17 19:59:35, MOVE, v:1, k:ed@rotacoes, mode:DOWN
+2026-05-17 19:59:37, MOVE, v:1, k:ed@alternando, mode:DOWN
+2026-05-17 19:57:42, MOVE, v:1, k:ed@fuga, mode:EDIT
+2026-05-17 19:57:43, MOVE, v:1, k:ed@fuga, mode:EDIT
+2026-05-17 19:58:06, MOVE, v:1, k:ed@casais, mode:EDIT
+2026-05-17 19:58:39, MOVE, v:1, k:ed@baruel, mode:EDIT
+2026-05-17 19:59:29, MOVE, v:1, k:ed@apagando, mode:EDIT
+2026-05-17 19:59:29, MOVE, v:1, k:ed@apagando, mode:EDIT
+2026-05-17 19:59:29, MOVE, v:1, k:ed@apagando, mode:EDIT
+2026-05-17 19:59:30, MOVE, v:1, k:ed@manipulacao, mode:EDIT
+2026-05-17 19:59:30, MOVE, v:1, k:ed@manipulacao, mode:EDIT
+2026-05-17 19:59:30, MOVE, v:1, k:ed@manipulacao, mode:EDIT
+2026-05-17 19:59:31, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-17 19:59:31, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-17 19:59:31, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-05-17 19:59:33, MOVE, v:1, k:ed@buscas, mode:EDIT
+2026-05-17 19:59:33, MOVE, v:1, k:ed@buscas, mode:EDIT
+2026-05-17 19:59:35, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-05-17 19:59:35, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-05-17 19:59:37, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-05-17 19:59:37, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-05-17 19:59:37, MOVE, v:1, k:ed@alternando, mode:EDIT

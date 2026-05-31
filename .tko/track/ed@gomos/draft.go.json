@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-17_19-10-23",
+            "content": "@@ -126,16 +126,14 @@\n can(\n-&\n intQ, \n-&\n char\n@@ -199,365 +199,8 @@\n sY)%0A\n-            switch(charD)%7B%0A                case %22U%22:%0A                    posY--%0A                    break%0A                case %22D%22:%0A                    posY++%0A                    break%0A                case %22R%22:%0A                    posX++%0A                    break%0A                case %22L%22:%0A                    posX--%0A                    break%0A            %7D%0A\n     \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-17_19-21-01",
+            "content": "@@ -625,214 +625,27 @@\n    f\n-or _, linha := range matCobra%7B%0A        for j, v:= range linha%7B%0A            if j==0%7B%0A                fmt.Printf(%22%25d %22, v)%0A            %7Delse%7B%0A                fmt.Printf(%22%25d/n%22, v)%0A            %7D%0A        %7D%0A    %7D\n+mt.Println(matCobra)\n %0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-05-17_19-34-18",
+            "content": "@@ -795,9 +795,9 @@\n (%22%25d\n-%5C\n+/\n n%22, \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-17_19-34-30",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -163,10 +163,8 @@\n intQ\n--1\n ; i+\n@@ -201,27 +201,8 @@\n sY)%0A\n-        if i == 0%7B%0A\n     \n@@ -277,16 +277,42 @@\n  posY--%0A\n+                    break%0A\n         \n@@ -356,16 +356,42 @@\n  posY++%0A\n+                    break%0A\n         \n@@ -435,16 +435,42 @@\n  posX++%0A\n+                    break%0A\n         \n@@ -526,26 +526,24 @@\n         \n-%7D%0A\n         \n     matC\n@@ -538,59 +538,18 @@\n     \n-    matCobra = append(matCobra, %5B%5Dint%7BposX, posY%7D)%0A\n+break%0A    \n     \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-17_19-48-04",
+            "content": "@@ -160,16 +160,18 @@\n ; i%3CintQ\n+-1\n ; i++%7B%0A \n@@ -295,57 +295,15 @@\n     \n- matCobra = append(matCobra, %5B%5Dint%7BposX,\n  posY-\n-1%7D)\n+-\n %0A   \n@@ -348,57 +348,15 @@\n     \n- matCobra = append(matCobra, %5B%5Dint%7BposX,\n  posY+\n-1%7D)\n++\n %0A   \n@@ -402,56 +402,14 @@\n     \n-matCobra = append(matCobra, %5B%5Dint%7BposX+1, posY%7D)\n+posX++\n %0A   \n@@ -431,32 +431,65 @@\n se %22L%22:%0A        \n+            posX--%0A            %7D%0A\n             matC\n@@ -522,18 +522,16 @@\n int%7BposX\n--1\n , posY%7D)\n@@ -531,30 +531,16 @@\n  posY%7D)%0A\n-            %7D%0A\n         \n@@ -611,17 +611,17 @@\n     for \n-i\n+_\n , linha \n@@ -643,69 +643,8 @@\n ra%7B%0A\n-        if i == len(matCobra)-1%7B%0A            break%0A        %7D%0A\n     \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-05-17_19-54-01",
+            "content": "package main\n\nimport \"fmt\"\nfunc main() {\n    var intQ, posX, posY int\n    var charD string\n    var matCobra [][]int\n\n    fmt.Scan(&intQ, &charD)\n    for i := 0; i<intQ; i++{\n        fmt.Scan(&posX, &posY)\n        if i == 0{\n            switch(charD){\n                case \"U\":\n                    matCobra = append(matCobra, []int{posX, posY-1})\n                case \"D\":\n                    matCobra = append(matCobra, []int{posX, posY+1})\n                case \"R\":\n                    matCobra = append(matCobra, []int{posX+1, posY})\n                case \"L\":\n                    matCobra = append(matCobra, []int{posX-1, posY})\n            }\n        }\n        matCobra = append(matCobra, []int{posX, posY})\n    }\n\n    for i, linha := range matCobra{\n        if i == len(matCobra)-1{\n            break\n        }\n        for j, v:= range linha{\n            if j==0{\n                fmt.Printf(\"%d \", v)\n            }else{\n                fmt.Printf(\"%d\\n\", v)\n            }\n        }\n    }\n}\n",
+            "lines": "39"
+        }
+    ]
+}

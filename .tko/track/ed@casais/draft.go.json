@@ -42,7 +42,12 @@
         },
         {
             "label": "2026-04-13_20-03-37",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var num, animal, conta int\n    var Animais []int\n\n    fmt.Scan(&num)\n    for i:=0; i<num; i++{\n        fmt.Scan(&animal)\n        Animais = append(Animais, animal)\n    }\n\n    for i := 0; i < len(Animais); i++{\n        for j := i+1; j < len(Animais); j++{\n            if Animais[j] == Animais[i]*(-1){\n                Animais = append(Animais[:j], Animais[j+1:]...)\n                Animais = append(Animais[:i], Animais[i+1:]...)\n                conta++\n                i--\n                break\n            }\n        }\n    }\n    fmt.Println(conta)\n\n}\n",
+            "content": "@@ -72,21 +72,16 @@\n     var \n-slice\n Animais \n@@ -158,37 +158,32 @@\n animal)%0A        \n-slice\n Animais = append\n@@ -179,29 +179,24 @@\n is = append(\n-slice\n Animais, ani\n@@ -227,29 +227,24 @@\n  0; i %3C len(\n-slice\n Animais); i+\n@@ -276,21 +276,16 @@\n j %3C len(\n-slice\n Animais)\n@@ -306,21 +306,16 @@\n      if \n-slice\n Animais%5B\n@@ -320,21 +320,16 @@\n s%5Bj%5D == \n-slice\n Animais%5B\n@@ -345,37 +345,32 @@\n                 \n-slice\n Animais = append\n@@ -362,37 +362,32 @@\n nimais = append(\n-slice\n Animais%5B:j%5D, sli\n@@ -383,21 +383,16 @@\n is%5B:j%5D, \n-slice\n Animais%5B\n@@ -417,21 +417,16 @@\n         \n-slice\n Animais \n@@ -434,21 +434,16 @@\n  append(\n-slice\n Animais%5B\n@@ -451,13 +451,8 @@\n i%5D, \n-slice\n Anim\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-05-17_19-58-06",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var num, animal, conta int\n    var sliceAnimais []int\n\n    fmt.Scan(&num)\n    for i:=0; i<num; i++{\n        fmt.Scan(&animal)\n        sliceAnimais = append(sliceAnimais, animal)\n    }\n\n    for i := 0; i < len(sliceAnimais); i++{\n        for j := i+1; j < len(sliceAnimais); j++{\n            if sliceAnimais[j] == sliceAnimais[i]*(-1){\n                sliceAnimais = append(sliceAnimais[:j], sliceAnimais[j+1:]...)\n                sliceAnimais = append(sliceAnimais[:i], sliceAnimais[i+1:]...)\n                conta++\n                i--\n                break\n            }\n        }\n    }\n    fmt.Println(conta)\n\n}\n",
             "lines": "26"
         }
     ]
