@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-10_05-43-47",
+            "content": "@@ -37,321 +37,39 @@\n ) %7B%0A\n-%0A    var n int%0A    mapa := make(map%5Bstring%5Dint)%0A    var input string%0A    var output %5B%5Dint%0A%0A    fmt.Scan(&n)%0A    for range n%7B%0A        fmt.Scan(&input)%0A        mapa%5Binput%5D++%0A    %7D%0A%0A    fmt.Scan(&n)%0A    for range n%7B%0A        fmt.Scan(&input)%0A        output = append(output, mapa%5Binput%5D)%0A    %7D%0A%0A    fmt.Println(output)%0A\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-07-07_21-58-48",
+            "content": "@@ -332,120 +332,8 @@\n    f\n-or i, v := range output%7B%0A        if i %3E 0%7B%0A            fmt.Print(%22 %22)%0A        %7D%0A        fmt.Print(v)%0A    %7D%0A    f\n mt.P\n@@ -339,13 +339,19 @@\n Println(\n+output\n )%0A%0A%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-07-07_22-05-28",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\n    var n int\n    mapa := make(map[string]int)\n    var input string\n    var output []int\n\n    fmt.Scan(&n)\n    for range n{\n        fmt.Scan(&input)\n        mapa[input]++\n    }\n\n    fmt.Scan(&n)\n    for range n{\n        fmt.Scan(&input)\n        output = append(output, mapa[input])\n    }\n\n    for i, v := range output{\n        if i > 0{\n            fmt.Print(\" \")\n        }\n        fmt.Print(v)\n    }\n    fmt.Println()\n\n}\n",
+            "lines": "30"
+        }
+    ]
+}

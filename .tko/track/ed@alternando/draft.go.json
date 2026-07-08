@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-07_22-58-03",
+            "content": "@@ -17,1712 +17,59 @@\n ort \n-(%0A    %22fmt%22%0A    //%22math%22%0A)%0Afunc matarDir(e int, sliceFila %5B%5Dint)(int, %5B%5Dint)%7B%0A    for i := range sliceFila%7B%0A        if e == i%7B%0A            if i == len(sliceFila)-1%7B%0A                sliceFila = append(sliceFila%5B:0%5D, sliceFila%5B1:%5D...)%0A            %7Delse%7B%0A                sliceFila = append(sliceFila%5B:i+1%5D, sliceFila%5Bi+2:%5D...)%0A            %7D%0A            break%0A        %7D%0A    %7D%0A    e++%0A    if e %3E= len(sliceFila)%7B e = 0 %7D%0A    return e, sliceFila%0A%7D%0Afunc matarEsq(e int, sliceFila %5B%5Dint)(int, %5B%5Dint)%7B%0A    for i := range sliceFila%7B%0A        if e == i%7B%0A            if i == 0%7B%0A                sliceFila = sliceFila%5B:len(sliceFila)-1%5D%0A            %7Delse%7B%0A                sliceFila = append(sliceFila%5B:i-1%5D, sliceFila%5Bi:%5D...)%0A            %7D%0A            break%0A        %7D%0A    %7D%0A    e++%0A    if e %3E= len(sliceFila)%7B e = 0 %7D%0A    return e, sliceFila%0A%7D%0Afunc toString(e int, sliceFila %5B%5Dint)%7B%0A    fmt.Printf(%22%5B %22)%0A    for i:= 0; i%3Clen(sliceFila);i++%7B%0A        if i == e%7B%0A            fmt.Printf(%22%25d%3E %22, sliceFila%5Bi%5D)%0A            continue%0A        %7D%0A        fmt.Printf(%22%25d %22, sliceFila%5Bi%5D)%0A    %7D%0A    fmt.Printf(%22%5D%5Cn%22)%0A%7D%0Afunc main() %7B%0A    var n, e, f int%0A    var sliceFila%5B%5D int%0A%0A    fmt.Scan(&n, &e, &f)%0A    e--%0A    // ABAIXO %C3%89 O CODIGO QUE FIZ PARA CALCULAR APENAS O GANHADOR%0A %0A    // resultado := (((2*n - int((math.Pow(2, float64(int(math.Log2(float64(n))) + 1)))) + e) - 1) %25 n) + 1%0A    // fmt.Println(resultado)%0A%0A    for i := range n%7B%0A        sliceFila = append(sliceFila, i*f)%0A        f *= -1%0A    %7D%0A    for _, v:=range sliceFila%7B%0A        if v %3C 0%7B%0A            e, sliceFila = matarEsq(e, sliceFila)%0A        %7Delse if v %3E 0%7B%0A            e, sliceFila = matarDir(e, sliceFila)%0A        %7D%0A%0A        toString(e, sliceFila)%0A        %0A    %7D\n+%22fmt%22%0Afunc main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-07-08_02-16-47",
+            "content": "@@ -1466,13 +1466,9 @@\n la, \n-(i+1)\n+i\n *f)%0A\n@@ -1493,35 +1493,8 @@\n   %7D%0A\n-    fmt.Println(sliceFila)%0A\n     \n@@ -1717,68 +1717,8 @@\n    %0A\n-        if len(sliceFila) == 1%7B%0A            break%0A        %7D%0A\n     \n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-07-08_02-22-04",
+            "content": "@@ -1493,36 +1493,36 @@\n 1%0A    %7D%0A    \n-toString(e, \n+fmt.Println(\n sliceFila)%0A \n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-07-08_02-23-06",
+            "content": "@@ -960,28 +960,8 @@\n == e\n- && sliceFila%5Bi%5D %3E 0\n %7B%0A  \n@@ -1028,119 +1028,8 @@\n nue%0A\n-        %7Delse if i == e && sliceFila%5Bi%5D %3C 0%7B%0A            fmt.Printf(%22%3C%25d %22, sliceFila%5Bi%5D)%0A            continue%0A\n     \n@@ -1497,28 +1497,23 @@\n   %7D%0A\n-%0A\n     \n-for _, v:=range\n+toString(e,\n  sli\n@@ -1522,29 +1522,29 @@\n Fila\n-%7B%0A \n+)%0A\n     \n-   toString(e,\n+for _, v:=range\n  sli\n@@ -1549,18 +1549,17 @@\n liceFila\n-)%0A\n+%7B\n %0A       \n@@ -1704,16 +1704,46 @@\n      %7D%0A%0A\n+        toString(e, sliceFila)\n %0A       \n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-07-08_02-25-08",
+            "content": "@@ -1836,20 +1836,91 @@\n )%0A        %7D%0A\n+%0A%0A        %0A        if len(sliceFila) == 1%7B%0A            break%0A        %7D%0A\n     %7D%0A%7D%0A\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-07-08_02-25-57",
+            "content": "@@ -950,35 +950,22 @@\n      if \n-(\n i == e\n- %7C%7C i == -e)\n  && slic\n@@ -1065,27 +1065,14 @@\n  if \n-(\n i == e\n- %7C%7C i == -e)\n  && \n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-07-08_02-30-52",
+            "content": "@@ -50,16 +50,19 @@\n nc matar\n+Dir\n (e int, \n@@ -104,11 +104,8 @@\n or i\n-, v\n  := \n@@ -142,17 +142,8 @@\n == i\n- && v %3E 0\n %7B%0A  \n@@ -355,24 +355,8 @@\n   %7D%0A\n-            e++%0A\n     \n@@ -382,31 +382,183 @@\n    %7D\n-else if e == i && v %3C 0\n+%0A    %7D%0A    e++%0A    if e %3E= len(sliceFila)%7B e = 0 %7D%0A    return e, sliceFila%0A%7D%0Afunc matarEsq(e int, sliceFila %5B%5Dint)(int, %5B%5Dint)%7B%0A    for i := range sliceFila%7B%0A        if e == i\n %7B%0A  \n@@ -768,24 +768,32 @@\n     %7D%0A    %7D%0A\n+    e++%0A\n     if e %3E= \n@@ -1650,20 +1650,16 @@\n 1%0A    %7D%0A\n-    \n %0A    for\n@@ -1663,59 +1663,159 @@\n for \n-len(sliceFila) %3E 0%7B%0A        toString(e, sliceFila)%0A\n+_, v:=range sliceFila%7B%0A        toString(e, sliceFila)%0A%0A        if v %3C 0%7B%0A            e, sliceFila = matarEsq(e, sliceFila)%0A        %7Delse if v %3E 0%7B%0A    \n     \n@@ -1838,16 +1838,19 @@\n  = matar\n+Dir\n (e, slic\n@@ -1852,20 +1852,30 @@\n  sliceFila)%0A\n+        %7D%0A\n     %7D%0A%7D%0A\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-07-08_02-52-05",
+            "content": "@@ -512,28 +512,8 @@\n -1%5D%0A\n-                e++%0A\n     \n@@ -1515,16 +1515,20 @@\n 1%0A    %7D%0A\n+    \n %0A    for\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-07-08_02-52-45",
+            "content": "@@ -508,16 +508,36 @@\n ila)-1%5D%0A\n+                e++%0A\n         \n@@ -539,32 +539,32 @@\n          %7Delse%7B%0A\n-\n                 \n@@ -635,24 +635,8 @@\n   %7D%0A\n-            e--%0A\n     \n@@ -661,24 +661,24 @@\n     %7D%0A    %7D%0A\n+\n     if e %3E= \n@@ -705,45 +705,8 @@\n 0 %7D%0A\n-    if e %3C 0%7B e = len(sliceFila)-1 %7D%0A\n     \n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-07-08_02-57-05",
+            "content": "@@ -628,13 +628,10 @@\n    e\n- -= 2\n+--\n %0A   \n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-07-08_02-57-59",
+            "content": "package main\nimport (\n    \"fmt\"\n    //\"math\"\n)\nfunc matar(e int, sliceFila []int)(int, []int){\n    for i, v := range sliceFila{\n        if e == i && v > 0{\n            if i == len(sliceFila)-1{\n                sliceFila = append(sliceFila[:0], sliceFila[1:]...)\n            }else{\n                sliceFila = append(sliceFila[:i+1], sliceFila[i+2:]...)\n            }\n            e++\n            break\n        }else if e == i && v < 0{\n            if i == 0{\n                sliceFila = sliceFila[:len(sliceFila)-1]\n            }else{\n                sliceFila = append(sliceFila[:i-1], sliceFila[i:]...)\n            }\n            e -= 2\n            break\n        }\n    }\n    if e >= len(sliceFila){ e = 0 }\n    if e < 0{ e = len(sliceFila)-1 }\n    return e, sliceFila\n}\nfunc toString(e int, sliceFila []int){\n    fmt.Printf(\"[ \")\n    for i:= 0; i<len(sliceFila);i++{\n        if (i == e || i == -e) && sliceFila[i] > 0{\n            fmt.Printf(\"%d> \", sliceFila[i])\n            continue\n        }else if (i == e || i == -e) && sliceFila[i] < 0{\n            fmt.Printf(\"<%d \", sliceFila[i])\n            continue\n        }\n        fmt.Printf(\"%d \", sliceFila[i])\n    }\n    fmt.Printf(\"]\\n\")\n}\nfunc main() {\n    var n, e, f int\n    var sliceFila[] int\n\n    fmt.Scan(&n, &e, &f)\n    e--\n    // ABAIXO \u00c9 O CODIGO QUE FIZ PARA CALCULAR APENAS O GANHADOR\n \n    // resultado := (((2*n - int((math.Pow(2, float64(int(math.Log2(float64(n))) + 1)))) + e) - 1) % n) + 1\n    // fmt.Println(resultado)\n\n    for i := range n{\n        sliceFila = append(sliceFila, (i+1)*f)\n        f *= -1\n    }\n\n    for len(sliceFila) > 0{\n        toString(e, sliceFila)\n        e, sliceFila = matar(e, sliceFila)\n    }\n}\n",
+            "lines": "64"
+        }
+    ]
+}

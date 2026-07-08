@@ -1,0 +1,44 @@
+2026-07-07 20:38:58, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-07-07 21:51:13, MOVE, v:1, k:ed@buscas, mode:EDIT
+2026-07-07 21:56:24, MOVE, v:1, k:ed@buscas, mode:EDIT
+2026-07-07 21:58:43, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-07-07 21:58:48, EXEC, v:1, k:ed@buscas, mode:FREE, size:24
+2026-07-07 22:01:22, MOVE, v:1, k:ed@buscas, mode:EDIT
+2026-07-07 21:58:50, MOVE, v:1, k:ed@buscas, mode:EDIT
+2026-07-07 22:05:28, EXEC, v:1, k:ed@buscas, mode:FULL, rate:100, size:30
+2026-07-07 22:05:31, MOVE, v:1, k:ed@buscas, mode:BACK
+2026-07-07 22:07:37, SELF, v:1, k:ed@buscas, self:1, rate:100, study:14, concept:1
+2026-07-07 22:07:40, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-07-07 22:20:40, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-07 22:23:00, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-07 22:31:54, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-07 22:35:17, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-07 22:40:15, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-07 22:50:51, EXEC, v:1, k:ed@rotacoes, mode:FREE, size:29
+2026-07-07 22:52:01, EXEC, v:1, k:ed@rotacoes, mode:FREE
+2026-07-07 22:50:49, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-07 22:52:01, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-07 22:55:56, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:0, size:34
+2026-07-07 22:56:13, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:100, size:34
+2026-07-07 22:56:23, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:100
+2026-07-07 22:56:39, MOVE, v:1, k:ed@rotacoes, mode:BACK
+2026-07-07 22:56:54, MOVE, v:1, k:ed@rotacoes, mode:PICK
+2026-07-07 22:56:55, EXEC, v:1, k:ed@rotacoes, mode:FULL, rate:100
+2026-07-07 22:56:57, MOVE, v:1, k:ed@rotacoes, mode:BACK
+2026-07-07 22:56:11, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-07 22:56:55, MOVE, v:1, k:ed@rotacoes, mode:EDIT
+2026-07-07 22:57:24, SELF, v:1, k:ed@rotacoes, self:1, rate:100, study:15, concept:1, refactor:1
+2026-07-07 22:58:00, MOVE, v:1, k:ed@alternando, mode:PICK
+2026-07-07 22:58:03, EXEC, v:1, k:ed@alternando, mode:FREE, size:5
+2026-07-07 22:58:11, MOVE, v:1, k:ed@alternando, mode:BACK
+2026-07-07 22:58:16, MOVE, v:1, k:ed@alternando, mode:PICK
+2026-07-07 22:59:18, MOVE, v:1, k:ed@alternando, mode:BACK
+2026-07-07 22:59:22, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-07-07 22:59:35, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-07-07 22:59:39, MOVE, v:1, k:ed@alternando, mode:PICK
+2026-07-07 22:59:40, MOVE, v:1, k:ed@alternando, mode:BACK
+2026-07-07 22:59:42, MOVE, v:1, k:ed@alternando, mode:PICK
+2026-07-07 22:58:03, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-07-07 23:02:03, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-07-07 23:07:05, MOVE, v:1, k:ed@alternando, mode:EDIT
+2026-07-07 23:09:53, MOVE, v:1, k:ed@alternando, mode:EDIT

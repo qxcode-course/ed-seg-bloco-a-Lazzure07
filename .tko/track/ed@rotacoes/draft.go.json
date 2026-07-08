@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-07_22-50-51",
+            "content": "@@ -196,47 +196,8 @@\n im--\n-%0A%0A    inverterVetor(vetor, inicio, fim)\n %0A%7D%0A%0A\n@@ -494,98 +494,17 @@\n rint\n-f(%22%5B %22)%0A    for _, v := range vetor%7B%0A        fmt.Printf(%22%25d %22, v)%0A    %7D%0A    fmt.Printf(%22%5D%22)\n+ln(vetor)%0A\n %0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-07-07_22-55-56",
+            "content": "@@ -618,10 +618,9 @@\n rint\n-ln\n+f\n (%22%5D%22\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-07-07_22-56-13",
+            "content": "package main\nimport \"fmt\"\n\nfunc inverterVetor(vetor[]int, inicio, fim int){\n    if inicio >= fim{\n        return\n    }\n    vetor[inicio], vetor[fim] = vetor[fim], vetor[inicio]\n    inicio++\n    fim--\n\n    inverterVetor(vetor, inicio, fim)\n}\n\nfunc main() {\n    var n, rota int\n    fmt.Scan(&n, &rota)\n    rota %= n\n\n    vetor := make([]int, n)\n    for i:= range n{\n        fmt.Scan(&vetor[i])\n    }\n\n    inverterVetor(vetor, 0, len(vetor)-1)\n    inverterVetor(vetor, 0, rota-1)\n    inverterVetor(vetor, rota, len(vetor)-1)\n\n    fmt.Printf(\"[ \")\n    for _, v := range vetor{\n        fmt.Printf(\"%d \", v)\n    }\n    fmt.Println(\"]\")\n}\n",
+            "lines": "34"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+2026-06-10 03:17:57, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-06-10 03:18:03, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:100, size:190
+2026-06-10 03:18:04, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-06-10 03:18:09, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-10 03:19:29, EXEC, v:1, k:ed@especiais, mode:FREE, size:305
+2026-06-10 03:19:56, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-06-10 03:19:58, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-06-10 03:20:13, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-06-10 03:20:14, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-06-10 03:22:38, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-06-10 03:22:43, MOVE, v:1, k:ed@buscas, mode:BACK
+2026-06-10 03:22:44, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-10 03:22:46, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-06-10 03:22:47, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-10 03:23:26, EXEC, v:1, k:ed@especiais, mode:FREE
+2026-06-10 03:23:26, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-06-10 05:23:41, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-10 05:42:15, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-06-10 05:42:18, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-10 05:42:21, EXEC, v:1, k:ed@especiais, mode:FULL, rate:100
+2026-06-10 05:42:28, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-06-10 05:42:50, SELF, v:1, k:ed@especiais, self:1, rate:100, study:50, concept:1
+2026-06-10 05:42:53, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-06-10 05:42:54, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-06-10 05:42:56, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-06-10 05:42:58, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:100
+2026-06-10 05:42:59, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-06-10 05:43:22, SELF, v:1, k:ed@manipulacao, self:1, rate:100, study:180, concept:1
+2026-06-10 05:43:45, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-06-10 05:43:47, EXEC, v:1, k:ed@buscas, mode:FREE, size:5
+2026-06-10 05:42:21, MOVE, v:1, k:ed@especiais, mode:EDIT
+2026-06-10 05:42:58, MOVE, v:1, k:ed@manipulacao, mode:EDIT
+2026-06-10 05:43:48, MOVE, v:1, k:ed@buscas, mode:EDIT

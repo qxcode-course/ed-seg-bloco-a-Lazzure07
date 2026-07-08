@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-01_20-14-31",
+            "content": "@@ -264,32 +264,60 @@\n %09%09fmt.Scan(&id)%0A\n+%09%09for id, _ := range fila%7B%0A%09\n %09%09fila%5Bid%5D = fal\n@@ -319,16 +319,20 @@\n = false%0A\n+%09%09%7D%0A\n %09%7D%0A%09%0A%09fo\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-06-07_19-07-30",
+            "content": "@@ -63,24 +63,8 @@\n  int\n-%0A%09var fila %5B%5Dint\n %0A%0A%09f\n@@ -84,16 +84,56 @@\n essoas)%0A\n+%09fila := make(map%5Bint%5Dbool, numPessoas)%0A\n %09for i:=\n@@ -191,27 +191,19 @@\n fila\n- = append(fila, id)\n+%5Bid%5D = true\n %0A%09%7D%0A\n@@ -224,47 +224,8 @@\n iu)%0A\n-%09filaSaiu := make(map%5Bint%5Dbool, nSaiu)%0A\n %09for\n@@ -282,22 +282,19 @@\n fila\n-Saiu\n %5Bid%5D = \n-tru\n+fals\n e%0A%09%7D\n@@ -305,9 +305,10 @@\n for \n-_\n+id\n , v \n@@ -331,38 +331,13 @@\n %09if \n-filaSaiu%5Bv%5D %7B%0A%09%09%09continue%0A%09%09%7D%0A\n+v %7B%0A%09\n %09%09fm\n@@ -356,10 +356,15 @@\n  %22, \n-v)\n+id)%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-06-07_19-27-55",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n\tvar numPessoas, nSaiu int\n\tvar fila []int\n\n\tfmt.Scan(&numPessoas)\n\tfor i:=0;i<numPessoas;i++{\n\t\tvar id int\n\t\tfmt.Scan(&id)\n\t\tfila = append(fila, id)\n\t}\n\tfmt.Scan(&nSaiu)\n\tfilaSaiu := make(map[int]bool, nSaiu)\n\tfor i:=0;i<nSaiu;i++{\n\t\tvar id int\n\t\tfmt.Scan(&id)\n\t\tfilaSaiu[id] = true\n\t}\n\t\n\tfor _, v := range fila{\n\t\tif filaSaiu[v] {\n\t\t\tcontinue\n\t\t}\n\t\tfmt.Printf(\"%d \", v)\n\t}\n\tfmt.Printf(\"\\n\")\n}\n",
+            "lines": "28"
+        }
+    ]
+}
