@@ -26,10 +26,9 @@ func (s *Set) Erase(value int) bool {
 }
 
 func (s *Set) Contains(value int) bool {
-	for _, num := range s.data {
-		if num == value {
-			return true
-		}
+	_, existe := s.binarySearch(value)
+	if existe{
+		return true
 	}
 	return false
 }
