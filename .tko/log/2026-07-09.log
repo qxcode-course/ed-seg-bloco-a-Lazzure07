@@ -1,0 +1,43 @@
+2026-07-09 19:08:19, MOVE, v:1, k:ed@resto, mode:PICK
+2026-07-09 19:11:08, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-09 19:36:23, EXEC, v:1, k:ed@resto, mode:FULL, size:32, fail:COMP
+2026-07-09 19:36:55, EXEC, v:1, k:ed@resto, mode:FULL, rate:0, size:33
+2026-07-09 19:36:43, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-09 19:36:55, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-09 19:41:40, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-09 19:47:14, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-09 19:52:15, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-09 19:52:59, EXEC, v:1, k:ed@resto, mode:FREE, size:19
+2026-07-09 19:52:56, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-09 19:52:59, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-09 20:00:56, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-09 20:00:58, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-09 20:06:51, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-09 20:10:48, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-09 20:16:03, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-09 20:22:11, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-09 20:24:43, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-09 20:22:33, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-09 20:34:55, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-09 20:34:44, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-09 20:41:49, EXEC, v:1, k:ed@resto, mode:FULL, rate:100, size:20
+2026-07-09 20:41:52, MOVE, v:1, k:ed@resto, mode:BACK
+2026-07-09 20:41:48, MOVE, v:1, k:ed@resto, mode:EDIT
+2026-07-09 20:42:30, MOVE, v:1, k:ed@resto, mode:PICK
+2026-07-09 20:42:32, MOVE, v:1, k:ed@resto, mode:BACK
+2026-07-09 20:42:48, SELF, v:1, k:ed@resto, self:1, rate:100, study:40, concept:1
+2026-07-09 20:42:57, MOVE, v:1, k:ed@mdc, mode:DOWN
+2026-07-09 20:43:14, MOVE, v:1, k:ed@mdc, mode:PICK
+2026-07-09 20:42:57, MOVE, v:1, k:ed@mdc, mode:EDIT
+2026-07-09 20:42:57, MOVE, v:1, k:ed@mdc, mode:EDIT
+2026-07-09 20:56:05, MOVE, v:1, k:ed@mdc, mode:EDIT
+2026-07-09 20:59:03, EXEC, v:1, k:ed@mdc, mode:FREE, size:20
+2026-07-09 20:59:21, EXEC, v:1, k:ed@mdc, mode:FULL, rate:100
+2026-07-09 20:59:22, MOVE, v:1, k:ed@mdc, mode:BACK
+2026-07-09 20:59:42, SELF, v:1, k:ed@mdc, self:1, rate:100, study:10
+2026-07-09 21:00:00, MOVE, v:1, k:ed@queimada, mode:DOWN
+2026-07-09 21:00:02, MOVE, v:1, k:ed@queimada, mode:PICK
+2026-07-09 20:58:40, MOVE, v:1, k:ed@mdc, mode:EDIT
+2026-07-09 20:59:21, MOVE, v:1, k:ed@mdc, mode:EDIT
+2026-07-09 21:00:00, MOVE, v:1, k:ed@queimada, mode:EDIT
+2026-07-09 21:00:00, MOVE, v:1, k:ed@queimada, mode:EDIT

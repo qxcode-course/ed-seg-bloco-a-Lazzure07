@@ -7,8 +7,28 @@
         },
         {
             "label": "2026-03-31_19-21-31",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello\")\n}\n",
+            "content": "@@ -1,324 +1,4 @@\n-func min(vet %5B%5Dint) int %7B%0A%0A%09if len(vet) == 0%7B%0A%09%09return -1%0A%09%7D%0A%0A%09var rec func(v %5B%5Dint) (int, int)%0A%0A%09rec = func(v %5B%5Dint) (int, int) %7B%0A%0A%09%09if len(v) == 1 %7B%0A%09%09%09return 0, v%5B0%5D%0A%09%09%7D%0A%0A%09%09indice, valor := rec(v%5B1:%5D)%0A%0A%09%09if v%5B0%5D %3C valor %7B%0A%09%09%09return 0, v%5B0%5D%0A%09%09%7D%0A%0A%09%09return indice + 1, valor%0A%09%7D%0A%0A%09indice, _ := rec(vet)%0A%0A%09return indice%0A%7D%0A\n pack\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-07-09_19-36-23",
+            "content": "@@ -1,31 +1,4 @@\n-package main%0Aimport %22fmt%22%0A%0A\n func\n@@ -313,16 +313,42 @@\n ndice%0A%7D%0A\n+package main%0Aimport %22fmt%22%0A\n func mai\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-07-09_19-36-55",
+            "content": "@@ -29,148 +29,323 @@\n unc \n-binario(num \n+min(vet %5B%5D\n int) \n-(\n int\n-, int) %7B%0A%0A    resto := num%252%0A    num /= 2%0A    if num == 0%7B%0A        return num, resto%0A    %7D%0A%0A    \n+ %7B%0A%0A%09if len(vet) == 0%7B%0A%09%09return -1%0A%09%7D%0A%0A%09var rec func(v %5B%5Dint) (int, int)%0A%0A%09rec = func(v %5B%5Dint) (int, int) %7B%0A%0A%09%09if len(v) == 1 %7B%0A%09%09%09return 0, v%5B0%5D%0A%09%09%7D%0A%0A%09%09indice, valor := rec(v%5B1:%5D)%0A%0A%09%09if v%5B0%5D %3C valor %7B%0A%09%09%09return 0, v%5B0%5D%0A%09%09%7D%0A%0A%09%09return indice + 1, valor%0A%09%7D%0A%0A%09indice, _ := rec(vet)%0A%0A%09\n return \n-b\n in\n-ario(num)\n+dice\n %0A%7D%0A\n-%0A\n func\n@@ -362,67 +362,27 @@\n     \n-var num int%0A    fmt.Scan(&num)%0A    fmt.Println(binario(num)\n+fmt.Println(%22Hello%22\n )%0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-07-09_19-52-59",
+            "content": "@@ -45,147 +45,127 @@\n int)\n-%7B%0A    if num == 0%7B%0A        return%0A    %7D%0A    resto := num%252%0A    resultado := num/2%0A%0A    binario(resultado)%0A%0A    fmt.Println(resultado, resto\n+ (int, int) %7B%0A%0A    resto := num%252%0A    num /= 2%0A    if num == 0%7B%0A        return num, resto%0A    %7D%0A%0A    return binario(num\n )%0A%7D%0A\n@@ -218,16 +218,28 @@\n um)%0A    \n+fmt.Println(\n binario(\n@@ -230,23 +230,24 @@\n Println(binario(num)\n+)\n %0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-07-09_20-41-48",
+            "content": "package main\nimport \"fmt\"\n\nfunc binario(num int){\n    if num == 0{\n        return\n    }\n    resto := num%2\n    resultado := num/2\n\n    binario(resultado)\n\n    fmt.Println(resultado, resto)\n}\n\nfunc main() {\n    var num int\n    fmt.Scan(&num)\n    binario(num)\n}\n",
+            "lines": "20"
         }
     ]
 }

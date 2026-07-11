@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-09_20-59-03",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc mdc(a, b int) int {\n\tif a == 0 || b == 0{\n\t\treturn int(math.Abs(  float64(a-b)  ))\n\t}\n\tR := a%b\n\treturn mdc(b, R)\n}\n\nfunc main() {\n\tvar a, b int\n\tfmt.Scan(&a, &b)\n\tfmt.Println(mdc(a, b))\n}\n",
+            "lines": "20"
+        }
+    ]
+}

@@ -18,8 +18,7 @@ sources:
   type: git
   writeable: false
   quests: null
-expanded:
-- ed@rec
+expanded: []
 flags:
   inbox: all
   panel: skills
@@ -29,5 +28,5 @@ audit:
   enabled: false
   interval_seconds: null
 lang: go
-selected: ed@recursao
-selected_index: 3
+selected: ed@map_set
+selected_index: 1
