@@ -18,7 +18,8 @@ sources:
   type: git
   writeable: false
   quests: null
-expanded: []
+expanded:
+- ed@vector
 flags:
   inbox: all
   panel: skills
@@ -28,5 +29,5 @@ audit:
   enabled: false
   interval_seconds: null
 lang: go
-selected: ed@map_set
-selected_index: 1
+selected: ed@multiset
+selected_index: 7

@@ -9,7 +9,27 @@ import (
 )
 
 func BetterSearch(slice []int, value int) (bool, int) {
-	_, _ = slice, value
+	inicio := 0
+	fim := len(slice) - 1
+
+	for inicio <= fim {
+		meio := (inicio + fim) / 2
+
+		if slice[meio] == value {
+			return true, meio
+		} else if inicio == fim && value < slice[meio] {
+			return false, inicio
+		} else if inicio == fim && value > slice[meio] {
+			return false, inicio+1
+		}
+
+		if value < slice[meio] {
+			fim = meio - 1
+		} else {
+			inicio = meio + 1
+		}
+	}
+
 	return false, 0
 }
 
