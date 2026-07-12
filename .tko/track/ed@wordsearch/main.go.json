@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-12_18-56-45",
+            "content": "@@ -249,11 +249,12 @@\n  = %22\n-SEE\n+ABCB\n %22%0A%0A%09\n@@ -1079,18 +1079,22 @@\n ine%7B%0A%09%09%09\n-if\n+return\n  backtra\n@@ -1111,30 +1111,8 @@\n , 0)\n-%7B%0A%09%09%09%09return true%0A%09%09%09%7D\n %0A%09%09%7D\n",
+            "lines": "71"
+        },
+        {
+            "label": "2026-07-12_19-02-56",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00e3o mude a assinatura desta fun\u00e7\u00e3o, ela \u00e9 a fun\u00e7\u00e3o chamada pelo LeetCode\nfunc exist(grid [][]byte, word string) bool {\n\n\t// [[\"A\",\"B\",\"C\",\"E\"],\n\t//  [\"S\",\"F\",\"C\",\"S\"],\n\t//  [\"A\",\"D\",\"E\",\"E\"]], word = \"SEE\"\n\n\tvisitado := make([][]bool, len(grid))\n\tfor i := range visitado{\n\t\tvisitado[i] = make([]bool, len(grid[0]))\n\t}\n\n\tvar backtracking func(linha, coluna, indice int)bool\n\n\tbacktracking = func(linha, coluna, indice int)bool{\n\n\t\tif indice == len(word){\n\t\t\treturn true\n\t\t}\n\n\t\tif linha < 0  || linha >= len(grid)     || \n\t\t   coluna < 0 || coluna >= len(grid[0]) || \n\t\t   visitado[linha][coluna]              || \n\t\t   grid[linha][coluna] != word[indice]   { return false }\n\n\t\tvisitado[linha][coluna] = true\n\n\t\tif backtracking(linha-1, coluna, indice+1) || \n\t\t   backtracking(linha+1, coluna, indice+1) || \n\t\t   backtracking(linha, coluna-1, indice+1) || \n\t\t   backtracking(linha, coluna+1, indice+1){\n\t\t\treturn true\n\t\t   }\n\n\t\t   visitado[linha][coluna] = false\n\n\t\treturn false\n\t}\n\n\tfor i, line := range grid{\n\t\tfor j := range line{\n\t\t\tif backtracking(i, j, 0){\n\t\t\t\treturn true\n\t\t\t}\n\t\t}\n\t}\n\n\treturn false\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar word string\n\tfmt.Sscanf(scanner.Text(), \"%s\", &word)\n\tgrid := make([][]byte, 0)\n\tfor scanner.Scan() {\n\t\tgrid = append(grid, []byte(scanner.Text()))\n\t}\n\tif exist(grid, word) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "73"
+        }
+    ]
+}
