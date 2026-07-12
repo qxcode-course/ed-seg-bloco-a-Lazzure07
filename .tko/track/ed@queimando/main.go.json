@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-12_10-28-56",
+            "content": "@@ -146,37 +146,8 @@\n s%5D()\n-%0A%09stack.Push(Pos%7Bl: l, c: c%7D)\n %0A%0A%09f\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-07-12_10-30-30",
+            "content": "@@ -160,17 +160,23 @@\n sh(Pos%7Bl\n-,\n+: l, c:\n  c%7D)%0A%0A%09f\n@@ -404,32 +404,36 @@\n %09stack.Push(Pos%7B\n+ l: \n coord.l -1, coor\n@@ -427,16 +427,19 @@\n rd.l -1,\n+ c:\n  coord.c\n@@ -454,24 +454,28 @@\n ck.Push(Pos%7B\n+ l: \n coord.l +1, \n@@ -473,16 +473,19 @@\n rd.l +1,\n+ c:\n  coord.c\n@@ -500,32 +500,36 @@\n ck.Push(Pos%7B\n+ l: \n coord.l,\n  coord.c -1%7D\n@@ -508,32 +508,35 @@\n Pos%7B l: coord.l,\n+ c:\n  coord.c -1%7D)%0A%09%09\n@@ -550,24 +550,28 @@\n ush(Pos%7B\n+ l: \n coord.l,\n  coord.c\n@@ -562,16 +562,19 @@\n coord.l,\n+ c:\n  coord.c\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-07-12_10-31-25",
+            "content": "@@ -164,15 +164,9 @@\n os%7Bl\n-: l, c:\n+,\n  c%7D)\n@@ -243,17 +243,16 @@\n oord.l %3E\n-=\n  len(gri\n@@ -288,17 +288,16 @@\n oord.c %3E\n-=\n  len(gri\n@@ -398,36 +398,32 @@\n %09stack.Push(Pos%7B\n- l: \n coord.l -1, c: c\n@@ -417,19 +417,16 @@\n rd.l -1,\n- c:\n  coord.c\n@@ -441,28 +441,24 @@\n ck.Push(Pos%7B\n- l: \n coord.l +1, \n@@ -456,19 +456,16 @@\n rd.l +1,\n- c:\n  coord.c\n@@ -480,36 +480,32 @@\n ck.Push(Pos%7B\n- l: \n coord.l,\n  c: coord.c \n@@ -484,35 +484,32 @@\n ush(Pos%7Bcoord.l,\n- c:\n  coord.c -1%7D)%0A%09%09\n@@ -527,20 +527,16 @@\n Pos%7B\n- l: \n coord.l,\n  c: \n@@ -535,11 +535,8 @@\n d.l,\n- c:\n  coo\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-07-12_10-34-41",
+            "content": "@@ -260,16 +260,18 @@\n en(grid)\n+-1\n  %7C%7C%0A%09%09  \n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-07-12_10-37-23",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct{\n\tl int\n\tc int\n}\n\nfunc burnTrees(grid [][]rune, l, c int) {\n\tstack := NewStack[Pos]()\n\tstack.Push(Pos{l: l, c: c})\n\n\tfor !stack.IsEmpty(){\n\t\tcoord := stack.Pop()\n\n\t\tif coord.l < 0 || coord.l >= len(grid) ||\n\t\t   coord.c < 0 || coord.c >= len(grid[0])||\n\t\t   grid[coord.l][coord.c] != '#'{\n\t\t\tcontinue\n\t\t}\n\n\t\tgrid[coord.l][coord.c] = 'o'\n\n\t\tstack.Push(Pos{ l: coord.l -1, c: coord.c})\n\t\tstack.Push(Pos{ l: coord.l +1, c: coord.c})\n\t\tstack.Push(Pos{ l: coord.l, c: coord.c -1})\n\t\tstack.Push(Pos{ l: coord.l, c: coord.c +1})\n\n\t}\n\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\n\tgrid := make([][]rune, 0, nl)\n\tfor range nl {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid = append(grid, line)\n\t}\n\tburnTrees(grid, lfire, cfire)\n\tshowGrid(grid)\n}\n\nfunc showGrid(mat [][]rune) {\n\tfor _, linha := range mat {\n\t\tfmt.Println(string(linha))\n\t}\n}\n",
+            "lines": "59"
+        }
+    ]
+}

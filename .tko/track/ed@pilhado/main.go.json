@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-12_11-12-47",
+            "content": "@@ -65,15 +65,19 @@\n %7B%0A%09l\n+in\n  int%0A%09c\n+ol\n  int\n@@ -1005,16 +1005,21 @@\n im %7B%0A%09%09%09\n+break\n %0A%09%09%7D%0A%0A%09%09\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-07-12_11-15-51",
+            "content": "@@ -1001,21 +1001,16 @@\n im %7B%0A%09%09%09\n-break\n %0A%09%09%7D%0A%0A%09%09\n@@ -1254,20 +1254,19 @@\n achou = \n-fals\n+tru\n e%0A%09%09%09%09br\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-07-12_11-18-33",
+            "content": "@@ -1259,19 +1259,20 @@\n achou = \n-tru\n+fals\n e%0A%09%09%09%09br\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-07-12_11-30-42",
+            "content": "@@ -1259,20 +1259,19 @@\n achou = \n-fals\n+tru\n e%0A%09%09%09%09br\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-07-12_11-31-46",
+            "content": "@@ -1259,19 +1259,20 @@\n achou = \n-tru\n+fals\n e%0A%09%09%09%09br\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-07-12_11-31-56",
+            "content": "@@ -278,34 +278,28 @@\n or i := \n-0; i %3C\n+range\n  linhas\n-; i++\n  %7B%0A%09%09lin\n@@ -455,22 +455,21 @@\n  := \n-0; j %3C\n+range\n  colunas\n ; j+\n@@ -468,14 +468,8 @@\n unas\n-; j++ \n %7B%0A%09%09\n@@ -623,34 +623,30 @@\n or i := \n-0; i %3C linhas; i++\n+range visitado\n  %7B%0A%09%09vis\n@@ -793,17 +793,16 @@\n %09%7B0, 1%7D,\n- \n %0A%09%7D%0A%0A%09ca\n@@ -1119,21 +1119,17 @@\n  %3E= 0 &&\n-%0A%09%09%09%09\n+ \n nl %3C lin\n@@ -1149,21 +1149,17 @@\n  %3E= 0 &&\n-%0A%09%09%09%09\n+ \n nc %3C col\n@@ -1465,26 +1465,20 @@\n  := \n-0; i %3C\n+range\n  linhas\n-; i++\n  %7B%0A%09\n",
+            "lines": "109"
+        },
+        {
+            "label": "2026-07-12_11-41-09",
+            "content": "@@ -65,53 +65,19 @@\n %7B%0A%09l\n-, c\n  int%0A%09\n-dir  int // pr%C3%B3ximo vizinho a testar\n+c int\n %0A%7D%0A%0A\n@@ -91,18 +91,23 @@\n in() %7B%0A%09\n-in\n+entrada\n  := bufi\n@@ -165,18 +165,23 @@\n t.Fscan(\n-in\n+entrada\n , &linha\n@@ -194,18 +194,23 @@\n lunas)%0A%09\n-in\n+entrada\n .ReadByt\n@@ -313,18 +313,23 @@\n a, _ := \n-in\n+entrada\n .ReadByt\n@@ -337,16 +337,17 @@\n s('%5Cn')%0A\n+%0A\n %09%09if len\n@@ -427,16 +427,17 @@\n -1%5D%0A%09%09%7D%0A\n+%0A\n %09%09lab%5Bi%5D\n@@ -517,32 +517,26 @@\n nicio = Pos%7B\n-l: i, c:\n+i,\n  j%7D%0A%09%09%09%7D%0A%09%09%09\n@@ -575,16 +575,10 @@\n Pos%7B\n-l: i, c:\n+i,\n  j%7D%0A\n@@ -704,37 +704,75 @@\n %7D%0A%0A%09\n-mov := %5B%5Dstruct%7B dl, dc int %7D\n+caminho := NewStack%5BPos%5D()%0A%09becos := NewStack%5BPos%5D()%0A%0A%09mov := %5B%5DPos\n %7B%0A%09%09\n@@ -783,16 +783,8 @@\n  0%7D,\n- // cima\n %0A%09%09%7B\n@@ -793,18 +793,8 @@\n  0%7D,\n-  // baixo\n %0A%09%09%7B\n@@ -804,111 +804,23 @@\n -1%7D,\n- // esquerda%0A%09%09%7B0, 1%7D,  // direita%0A%09%7D%0A%0A%09caminho := NewStack%5BPos%5D()%0A%09visitado%5Binicio.l%5D%5Binicio.c%5D = true\n+%0A%09%09%7B0, 1%7D, %0A%09%7D%0A\n %0A%09ca\n@@ -880,25 +880,25 @@\n  := caminho.\n-P\n+T\n op()%0A%0A%09%09if a\n@@ -900,82 +900,106 @@\n %09if \n-atual.l == fim.l && atual.c == fim.c %7B%0A%09%09%09caminho.Push(atual)%0A%09%09%09break%0A%09%09%7D\n+visitado%5Batual.l%5D%5Batual.c%5D %7B%0A%09%09%09caminho.Pop()%0A%09%09%09continue%0A%09%09%7D%0A%0A%09%09visitado%5Batual.l%5D%5Batual.c%5D = true\n %0A%0A%09%09\n@@ -1010,126 +1010,77 @@\n tual\n-.dir\n  == \n-4\n+fim\n  %7B%0A%09%09%09\n-continue%0A%09%09%7D%0A%0A%09%09// volta o n%C3%B3 para continuar depois%0A%09%09prox := atual%0A%09%09prox.dir++%0A%09%09caminho.Push(prox)%0A%0A\n+break%0A%09%09%7D%0A%0A%09%09achou := false%0A%0A%09%09for _, m := range mov %7B%0A%09\n %09%09nl\n@@ -1098,25 +1098,12 @@\n  + m\n-ov%5Batual.dir%5D.d\n+.\n l%0A\n+%09\n %09%09nc\n@@ -1121,26 +1121,13 @@\n  + m\n-ov%5Batual.dir%5D.d\n+.\n c%0A%0A\n+%09\n %09%09if\n@@ -1137,17 +1137,21 @@\n  %3E= 0 &&\n- \n+%0A%09%09%09%09\n nl %3C lin\n@@ -1160,16 +1160,17 @@\n s &&%0A%09%09%09\n+%09\n nc %3E= 0 \n@@ -1171,17 +1171,21 @@\n  %3E= 0 &&\n- \n+%0A%09%09%09%09\n nc %3C col\n@@ -1191,24 +1191,25 @@\n lunas &&%0A%09%09%09\n+%09\n lab%5Bnl%5D%5Bnc%5D \n@@ -1218,16 +1218,17 @@\n  '#' &&%0A\n+%09\n %09%09%09!visi\n@@ -1250,65 +1250,122 @@\n %0A%09%09%09\n-visitado%5Bnl%5D%5Bnc%5D = true%0A%09%09%09caminho.Push(Pos%7Bl: nl, c: nc%7D\n+%09caminho.Push(Pos%7Bnl, nc%7D)%0A%09%09%09%09achou = true%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%0A%09%09if !achou %7B%0A%09%09%09becos.Push(atual)%0A%09%09%09caminho.Pop(\n )%0A%09%09\n@@ -1417,16 +1417,17 @@\n o.Pop()%0A\n+%0A\n %09%09if lab\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-07-12_11-42-30",
+            "content": "@@ -78,17 +78,45 @@\n dir  int\n+ // pr%C3%B3ximo vizinho a testar\n %0A\n-\n %7D%0A%0Afunc \n@@ -616,64 +616,8 @@\n %7D%0A%09%7D\n-%0A%09lab%5Binicio.l%5D%5Binicio.c%5D = ' '%0A%09lab%5Bfim.l%5D%5Bfim.c%5D = ' '\n %0A%0A%09v\n@@ -761,24 +761,32 @@\n %7B%0A%09%09%7B-1, 0%7D,\n+ // cima\n %0A%09%09%7B1, 0%7D,%0A%09\n@@ -783,16 +783,26 @@\n %09%7B1, 0%7D,\n+  // baixo\n %0A%09%09%7B0, -\n@@ -808,18 +808,42 @@\n -1%7D,\n-%0A%09%09%7B0, 1%7D,\n+ // esquerda%0A%09%09%7B0, 1%7D,  // direita\n %0A%09%7D%0A\n@@ -1103,16 +1103,54 @@\n ue%0A%09%09%7D%0A%0A\n+%09%09// volta o n%C3%B3 para continuar depois%0A\n %09%09prox :\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-07-12_11-44-48",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl, c int\n\tdir  int\n}\n\nfunc main() {\n\tin := bufio.NewReader(os.Stdin)\n\n\tvar linhas, colunas int\n\tfmt.Fscan(in, &linhas, &colunas)\n\tin.ReadByte()\n\n\tlab := make([][]byte, linhas)\n\n\tvar inicio, fim Pos\n\n\tfor i := 0; i < linhas; i++ {\n\t\tlinha, _ := in.ReadBytes('\\n')\n\t\tif len(linha) > 0 && linha[len(linha)-1] == '\\n' {\n\t\t\tlinha = linha[:len(linha)-1]\n\t\t}\n\t\tlab[i] = linha\n\n\t\tfor j := 0; j < colunas; j++ {\n\t\t\tif lab[i][j] == 'I' {\n\t\t\t\tinicio = Pos{l: i, c: j}\n\t\t\t}\n\t\t\tif lab[i][j] == 'F' {\n\t\t\t\tfim = Pos{l: i, c: j}\n\t\t\t}\n\t\t}\n\t}\n\tlab[inicio.l][inicio.c] = ' '\n\tlab[fim.l][fim.c] = ' '\n\n\tvisitado := make([][]bool, linhas)\n\tfor i := 0; i < linhas; i++ {\n\t\tvisitado[i] = make([]bool, colunas)\n\t}\n\n\tmov := []struct{ dl, dc int }{\n\t\t{-1, 0},\n\t\t{1, 0},\n\t\t{0, -1},\n\t\t{0, 1},\n\t}\n\n\tcaminho := NewStack[Pos]()\n\tvisitado[inicio.l][inicio.c] = true\n\tcaminho.Push(inicio)\n\n\tfor !caminho.IsEmpty() {\n\t\tatual := caminho.Pop()\n\n\t\tif atual.l == fim.l && atual.c == fim.c {\n\t\t\tcaminho.Push(atual)\n\t\t\tbreak\n\t\t}\n\n\t\tif atual.dir == 4 {\n\t\t\tcontinue\n\t\t}\n\n\t\tprox := atual\n\t\tprox.dir++\n\t\tcaminho.Push(prox)\n\n\t\tnl := atual.l + mov[atual.dir].dl\n\t\tnc := atual.c + mov[atual.dir].dc\n\n\t\tif nl >= 0 && nl < linhas &&\n\t\t\tnc >= 0 && nc < colunas &&\n\t\t\tlab[nl][nc] != '#' &&\n\t\t\t!visitado[nl][nc] {\n\n\t\t\tvisitado[nl][nc] = true\n\t\t\tcaminho.Push(Pos{l: nl, c: nc})\n\t\t}\n\t}\n\n\tfor !caminho.IsEmpty() {\n\t\tp := caminho.Pop()\n\t\tif lab[p.l][p.c] == ' ' {\n\t\t\tlab[p.l][p.c] = '.'\n\t\t}\n\t}\n\n\tfor i := 0; i < linhas; i++ {\n\t\tfmt.Println(string(lab[i]))\n\t}\n}\n",
+            "lines": "99"
+        }
+    ]
+}
