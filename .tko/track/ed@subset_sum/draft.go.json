@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-12_13-42-44",
+            "content": "@@ -114,16 +114,31 @@\n junto)-1\n+ %7C%7C sum %3E value\n %7B%0A      \n@@ -502,13 +502,8 @@\n  for\n- i :=\n  ran\n@@ -509,19 +509,33 @@\n nge size\n- \n %7B%0A\n+        v := 0%0A\n         \n@@ -548,19 +548,48 @@\n an(&\n-conjunto%5Bi%5D\n+v)%0A        conjunto = append(conjunto, v\n )%0A  \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-07-12_13-45-49",
+            "content": "@@ -112,16 +112,18 @@\n onjunto)\n+-1\n %7B%0A      \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-07-12_13-46-02",
+            "content": "@@ -94,20 +94,30 @@\n  if \n-sum == value\n+index == len(conjunto)\n %7B%0A  \n@@ -129,27 +129,28 @@\n  return \n-tru\n+fals\n e%0A    %7D%0A\n     %0A   \n@@ -145,20 +145,16 @@\n   %7D%0A\n-    \n %0A    if \n inde\n@@ -149,38 +149,28 @@\n %0A    if \n-index == len(conjunto)\n+sum == value\n %7B%0A      \n@@ -170,36 +170,35 @@\n %0A        return \n-fals\n+tru\n e%0A    %7D%0A%0A%09if bac\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-07-12_14-02-00",
+            "content": "package main\nimport \"fmt\"\nfunc backtracking (conjunto []int, value, index, sum int)bool{\n\n    if sum == value{\n        return true\n    }\n    \n    if index == len(conjunto){\n        return false\n    }\n\n\tif backtracking(conjunto, value, index+1, sum + conjunto[index]) {\n\t\treturn true\n\t}\n\n    if backtracking(conjunto, value, index+1, sum){\n        return true\n    }\n\n    return false\n}\nfunc main() {\n    var size, value int\n    fmt.Scan(&size, &value)\n    conjunto := make([]int, size)\n    for i := range size {\n        fmt.Scan(&conjunto[i])\n    }\n\n    fmt.Println(backtracking(conjunto, value, 0, 0))\n\n}\n",
+            "lines": "33"
+        }
+    ]
+}

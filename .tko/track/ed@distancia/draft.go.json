@@ -1,0 +1,14 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-12_18-06-34",
+            "content": "@@ -290,17 +290,17 @@\n et%5Bpos%5D \n-!\n+=\n = '.'%7B%0A \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-07-12_18-08-24",
+            "content": "package main\nimport \"fmt\"\nfunc main() {\n    var seq string\n    var l int\n    fmt.Scan(&seq, &l)\n\n    vetor := []byte(seq)\n\n    backtrack(vetor, 0, l)\n\n    fmt.Println(string(vetor))\n}\n\nfunc backtrack (vet []byte, pos, l int)bool{\n    if pos == len(vet){\n        return true\n    }\n\n    if vet[pos] != '.'{\n        return backtrack(vet, pos+1, l)\n    }\n\n    for i := byte('0'); i <= byte('0'+l); i++ {\n\t\tif pode(vet, pos, i, l) {\n\t\t\tvet[pos] = i\n\n\t\t\tif backtrack(vet, pos+1, l) {\n\t\t\t\treturn true\n\t\t\t}\n\n\t\t\tvet[pos] = '.'\n\t\t}\n    }\n    return false\n}\n\nfunc pode(vet []byte, pos int, v byte, l int) bool {\n\tinicio := pos - l\n    fim := pos + l\n    if inicio < 0{inicio = 0}\n    if fim > len(vet) - 1 {fim = len(vet) -1}\n\n    for i := inicio; i <= fim; i++{\n        if vet[i] == v && i != pos{\n            return false\n        }\n    }\n    return true\n}\n",
+            "lines": "50"
+        }
+    ]
+}
