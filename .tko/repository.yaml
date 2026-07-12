@@ -19,7 +19,11 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@tree
+- ed@rec
+- ed@vector
+- ed@map_set
+- ed@list
+- ed@backtrack
 flags:
   inbox: all
   panel: skills
@@ -29,5 +33,5 @@ audit:
   enabled: false
   interval_seconds: null
 lang: go
-selected: ed@bst_insert
-selected_index: 16
+selected: ed@wordsearch
+selected_index: 56

@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-12_23-10-33",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc MagicSearch(slice []int, value int) int {\n\tini := 0\n\tfim := len(slice) -1\n\n\tfor ini <= fim{\n\n\t\tmeio := (ini+fim)/2\n\n\t\tif value == slice[meio]{\n\t\t\tfor meio +1 < len(slice) && slice[meio+1] == value {\n\t\t\t\tmeio++\n\t\t\t}\n\t\t\treturn meio\n\t\t}\n\n\t\tif value > slice[meio]{\n\t\t\tini = meio +1\n\t\t}\n\t\tif value < slice[meio]{\n\t\t\tfim = meio-1\n\t\t}\n\t}\n\treturn ini\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Fields(scanner.Text())\n\tslice := make([]int, 0, 1)\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tresult := MagicSearch(slice, value)\n\tfmt.Println(result)\n}\n",
+            "lines": "50"
+        }
+    ]
+}
