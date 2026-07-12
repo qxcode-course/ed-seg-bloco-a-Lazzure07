@@ -357,3 +357,60 @@
 2026-07-12 20:29:18, MOVE, v:1, k:ed@inverter, mode:DOWN
 2026-07-12 20:29:19, MOVE, v:1, k:ed@inverter, mode:PICK
 2026-07-12 20:29:44, MOVE, v:1, k:ed@inverter, mode:BACK
+2026-07-12 20:31:15, MOVE, v:1, k:ed@inverter, mode:EDIT
+2026-07-12 20:42:36, MOVE, v:1, k:ed@inverter, mode:PICK
+2026-07-12 20:42:38, EXEC, v:1, k:ed@inverter, mode:FULL, rate:0, size:78
+2026-07-12 20:42:43, EXEC, v:1, k:ed@inverter, mode:FULL, rate:0
+2026-07-12 20:43:06, MOVE, v:1, k:ed@inverter, mode:BACK
+2026-07-12 20:43:08, MOVE, v:1, k:ed@inverter, mode:PICK
+2026-07-12 20:43:09, EXEC, v:1, k:ed@inverter, mode:FULL, rate:0
+2026-07-12 20:43:12, MOVE, v:1, k:ed@inverter, mode:BACK
+2026-07-12 20:43:13, MOVE, v:1, k:ed@inverter, mode:PICK
+2026-07-12 20:43:14, EXEC, v:1, k:ed@inverter, mode:FREE
+2026-07-12 20:45:17, MOVE, v:1, k:ed@inverter, mode:EDIT
+2026-07-12 20:43:36, MOVE, v:1, k:ed@inverter, mode:EDIT
+2026-07-12 20:46:01, EXEC, v:1, k:ed@inverter, mode:FULL, rate:100, size:78
+2026-07-12 20:46:02, MOVE, v:1, k:ed@inverter, mode:BACK
+2026-07-12 20:46:14, SELF, v:1, k:ed@inverter, self:1, rate:100, study:20
+2026-07-12 20:46:17, MOVE, v:1, k:ed@clonar, mode:DOWN
+2026-07-12 20:46:27, MOVE, v:1, k:ed@soma, mode:DOWN
+2026-07-12 20:46:31, MOVE, v:1, k:ed@clonar, mode:PICK
+2026-07-12 20:49:36, EXEC, v:1, k:ed@clonar, mode:FULL, rate:0, size:83
+2026-07-12 20:49:41, EXEC, v:1, k:ed@clonar, mode:FULL, rate:0
+2026-07-12 20:50:31, EXEC, v:1, k:ed@clonar, mode:FULL, rate:33, size:83
+2026-07-12 20:45:50, MOVE, v:1, k:ed@inverter, mode:EDIT
+2026-07-12 20:46:01, MOVE, v:1, k:ed@inverter, mode:EDIT
+2026-07-12 20:46:17, MOVE, v:1, k:ed@clonar, mode:EDIT
+2026-07-12 20:50:29, MOVE, v:1, k:ed@clonar, mode:EDIT
+2026-07-12 20:46:27, MOVE, v:1, k:ed@soma, mode:EDIT
+2026-07-12 20:46:27, MOVE, v:1, k:ed@soma, mode:EDIT
+2026-07-12 20:50:31, MOVE, v:1, k:ed@clonar, mode:EDIT
+2026-07-12 20:51:17, EXEC, v:1, k:ed@clonar, mode:FULL, rate:100, size:83
+2026-07-12 20:51:18, MOVE, v:1, k:ed@clonar, mode:BACK
+2026-07-12 20:51:27, SELF, v:1, k:ed@clonar, self:1, rate:100, study:5
+2026-07-12 20:51:28, MOVE, v:1, k:ed@soma, mode:PICK
+2026-07-12 20:52:23, MOVE, v:1, k:ed@soma, mode:BACK
+2026-07-12 20:52:38, MOVE, v:1, k:ed@arvore-path, mode:DOWN
+2026-07-12 20:52:39, MOVE, v:1, k:ed@arvore-path, mode:PICK
+2026-07-12 20:51:16, MOVE, v:1, k:ed@clonar, mode:EDIT
+2026-07-12 20:51:17, MOVE, v:1, k:ed@clonar, mode:EDIT
+2026-07-12 20:52:38, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-12 20:55:43, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-12 21:00:46, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-12 21:01:34, EXEC, v:1, k:ed@arvore-path, mode:FULL, rate:12, size:93
+2026-07-12 21:03:17, EXEC, v:1, k:ed@arvore-path, mode:FULL, rate:12, size:96
+2026-07-12 21:05:47, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-12 21:03:17, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-12 21:08:45, EXEC, v:1, k:ed@arvore-path, mode:FULL, rate:87, size:93
+2026-07-12 21:09:06, EXEC, v:1, k:ed@arvore-path, mode:FULL, rate:87, size:93
+2026-07-12 21:09:14, EXEC, v:1, k:ed@arvore-path, mode:FULL, rate:50
+2026-07-12 21:09:18, EXEC, v:1, k:ed@arvore-path, mode:FULL, rate:50
+2026-07-12 21:09:20, EXEC, v:1, k:ed@arvore-path, mode:FULL, rate:87, size:93
+2026-07-12 21:09:55, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-12 21:09:20, MOVE, v:1, k:ed@arvore-path, mode:EDIT
+2026-07-12 21:11:01, EXEC, v:1, k:ed@arvore-path, mode:FULL, rate:25, size:93
+2026-07-12 21:11:07, EXEC, v:1, k:ed@arvore-path, mode:FULL, rate:87, size:93
+2026-07-12 21:12:43, EXEC, v:1, k:ed@arvore-path, mode:FULL, rate:50, size:93
+2026-07-12 21:12:58, EXEC, v:1, k:ed@arvore-path, mode:FULL, rate:100, size:93
+2026-07-12 21:13:02, MOVE, v:1, k:ed@arvore-path, mode:BACK
+2026-07-12 21:13:14, SELF, v:1, k:ed@arvore-path, self:1, rate:100, study:25

@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+
 	"strconv"
 	"strings"
 )
@@ -14,31 +15,43 @@ type Node struct {
 	Right *Node
 }
 
-func Reverse(node *Node) {
+// retorne o caminho até o nó ou ! se não existir
+// você pode fazer recursivo ou interativo
+// também pode criar funções auxiliares se achar necessário
+func findPath(node *Node, value int) string {
 	if node == nil{
-		return
+		return "!"
 	}
 
-	node.Left, node.Right = node.Right, node.Left
+	if value == node.Value{
+		return "x"
+	}
+	left := findPath(node.Left, value)
+	if left != "!"{
+		return "l" + left
+	}
+	right := findPath(node.Right, value)
+	if right != "!"{
+		return "r" + right
+	}
 
-	Reverse(node.Left)
-	Reverse(node.Right)
+	return "!"
 }
 
-// -----------------------------------------------------------------------------------
-func BShow(node *Node, history string) {
+// ----------------------------------------------------------------------------------
+func BShow(node *Node, heranca string) {
 	if node != nil && (node.Left != nil || node.Right != nil) {
-		BShow(node.Left, history+"l")
+		BShow(node.Left, heranca+"l")
 	}
-	for i := 0; i < len(history)-1; i++ {
-		if history[i] != history[i+1] {
+	for i := 0; i < len(heranca)-1; i++ {
+		if heranca[i] != heranca[i+1] {
 			fmt.Print("│   ")
 		} else {
 			fmt.Print("    ")
 		}
 	}
-	if history != "" {
-		if history[len(history)-1] == 'l' {
+	if heranca != "" {
+		if heranca[len(heranca)-1] == 'l' {
 			fmt.Print("╭───")
 		} else {
 			fmt.Print("╰───")
@@ -50,7 +63,7 @@ func BShow(node *Node, history string) {
 	}
 	fmt.Println(node.Value)
 	if node.Left != nil || node.Right != nil {
-		BShow(node.Right, history+"r")
+		BShow(node.Right, heranca+"r")
 	}
 }
 
@@ -71,8 +84,10 @@ func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
 	parts := strings.Split(scanner.Text(), " ")
+	scanner.Scan()
+	value, _ := strconv.Atoi(scanner.Text())
 	root := create(&parts)
+	fmt.Println("Arvore:")
 	BShow(root, "") // Chama a função de impressão formatada
-	Reverse(root)   // Inverte a árvore
-	BShow(root, "") // Chama novamente para mostrar a árvore invertida
+	fmt.Println("Caminho:", findPath(root, value))
 }

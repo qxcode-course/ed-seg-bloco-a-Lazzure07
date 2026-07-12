@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+
 	"strconv"
 	"strings"
 )
@@ -14,31 +15,35 @@ type Node struct {
 	Right *Node
 }
 
-func Reverse(node *Node) {
-	if node == nil{
-		return
-	}
-
-	node.Left, node.Right = node.Right, node.Left
-
-	Reverse(node.Left)
-	Reverse(node.Right)
+func rec_sum(node *Node) int {
+	_ = node
+	return 0
 }
 
-// -----------------------------------------------------------------------------------
-func BShow(node *Node, history string) {
+func rec_min(node *Node) int {
+	_ = node
+	return 0
+}
+
+// MyShow imprime a árvore binária de forma formatada.
+func MyShow(node *Node, nivel int) {
+	_, _ = node, nivel
+	// TODO
+}
+
+func BShow(node *Node, heranca string) {
 	if node != nil && (node.Left != nil || node.Right != nil) {
-		BShow(node.Left, history+"l")
+		BShow(node.Left, heranca+"l")
 	}
-	for i := 0; i < len(history)-1; i++ {
-		if history[i] != history[i+1] {
+	for i := 0; i < len(heranca)-1; i++ {
+		if heranca[i] != heranca[i+1] {
 			fmt.Print("│   ")
 		} else {
 			fmt.Print("    ")
 		}
 	}
-	if history != "" {
-		if history[len(history)-1] == 'l' {
+	if heranca != "" {
+		if heranca[len(heranca)-1] == 'l' {
 			fmt.Print("╭───")
 		} else {
 			fmt.Print("╰───")
@@ -50,7 +55,7 @@ func BShow(node *Node, history string) {
 	}
 	fmt.Println(node.Value)
 	if node.Left != nil || node.Right != nil {
-		BShow(node.Right, history+"r")
+		BShow(node.Right, heranca+"r")
 	}
 }
 
@@ -72,7 +77,7 @@ func main() {
 	scanner.Scan()
 	parts := strings.Split(scanner.Text(), " ")
 	root := create(&parts)
-	BShow(root, "") // Chama a função de impressão formatada
-	Reverse(root)   // Inverte a árvore
-	BShow(root, "") // Chama novamente para mostrar a árvore invertida
+	fmt.Println("Arvore:")
+	BShow(root, "")
+	fmt.Printf("Soma: %d, Minimo: %d\n", rec_sum(root), rec_min(root))
 }
