@@ -29,5 +29,5 @@ audit:
   enabled: false
   interval_seconds: null
 lang: go
-selected: ed@fila_enc
-selected_index: 7
+selected: ed@pilha
+selected_index: 8
