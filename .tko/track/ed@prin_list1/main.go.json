@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-12_02-24-40",
+            "content": "@@ -245,16 +245,55 @@\n ext() %7B%0A\n+%09%09sb.WriteString(fmt.Sprint(it.Value))%0A\n %09%09if it \n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-12_02-25-10",
+            "content": "@@ -249,47 +249,8 @@\n ) %7B%0A\n-%09%09sb.WriteString(fmt.Sprint(it.Value))%0A\n %09%09if\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-07-12_02-25-28",
+            "content": "@@ -628,16 +628,42 @@\n chosen)%0A\n+%09fmt.Println(qtd, chosen)%0A\n %09l := Ne\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-07-12_02-26-49",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\n// mostra a lista com o elemento sword destacado\nfunc ToStr(l *DList[int], sword *DNode[int]) string {\n\n\t\tvar sb strings.Builder\n\n\tsb.WriteString(\"[ \")\n\n\t\tfor it := l.Front(); it != l.End(); it = it.Next() {\n\t\tsb.WriteString(fmt.Sprint(it.Value))\n\t\tif it == sword {\n\t\t\tsb.WriteString(\">\")\n\t\t}\n\t\tsb.WriteString(\" \")\n\t}\n\n\tsb.WriteString(\"]\")\n\treturn sb.String()\n}\n\n// move para frente na lista circular\nfunc Next(l *DList[int], it *DNode[int]) *DNode[int] {\n\t\n\tit = it.Next()\n\n\tif it == l.End(){\n\t\treturn l.Front()\n\t}\n\n\treturn it\n}\n\nfunc main() {\n\tvar qtd, chosen int\n\tfmt.Scan(&qtd, &chosen)\n\tl := NewDList[int]()\n\tfor i := 1; i <= qtd; i++ {\n\t\tl.PushBack(i)\n\t}\n\tsword := l.Front()\n\tfor range chosen - 1 {\n\t\tsword = Next(l, sword)\n\t}\n\tfor range qtd - 1 {\n\t\tfmt.Println(ToStr(l, sword))\n\t\tl.Erase(Next(l, sword))\n\t\tsword = Next(l, sword)\n\t}\n\tfmt.Println(ToStr(l, sword))\n}\n",
+            "lines": "56"
+        }
+    ]
+}
