@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-12_10-00-47",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tq := NewQueue[string]()\n\n\tfor i := 'A'; i <= 'P'; i++{\n\t\tq.Enqueue(string(i))\n\t}\n\n\tfor range 15 {\n\t\ttime1 := q.Dequeue()\n\t\ttime2 := q.Dequeue()\n\t\tgols1 := 0\n\t\tgols2 := 0\n\n\t\tfmt.Scan(&gols1, &gols2)\n\t\tif gols1>gols2{\n\t\t\tq.Enqueue(time1)\n\t\t}else{\n\t\t\tq.Enqueue(time2)\n\t\t}\n\t}\n\tfmt.Println(q.Dequeue())\n}\n",
+            "lines": "28"
+        }
+    ]
+}

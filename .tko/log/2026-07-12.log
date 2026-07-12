@@ -187,3 +187,15 @@
 2026-07-12 08:24:37, EXEC, v:1, k:ed@pilha, mode:FULL, rate:100, size:113
 2026-07-12 08:24:38, MOVE, v:1, k:ed@pilha, mode:BACK
 2026-07-12 08:24:54, SELF, v:1, k:ed@pilha, self:1, rate:100, study:20
+2026-07-12 08:25:43, MOVE, v:1, k:ed@chaves, mode:DOWN
+2026-07-12 08:25:44, MOVE, v:1, k:ed@chaves, mode:PICK
+2026-07-12 08:25:43, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-07-12 08:25:43, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-07-12 08:25:43, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-07-12 08:34:59, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-07-12 08:37:08, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-07-12 09:54:56, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-07-12 10:00:30, MOVE, v:1, k:ed@chaves, mode:EDIT
+2026-07-12 10:00:47, EXEC, v:1, k:ed@chaves, mode:FULL, rate:100, size:68
+2026-07-12 10:00:48, MOVE, v:1, k:ed@chaves, mode:BACK
+2026-07-12 10:01:01, SELF, v:1, k:ed@chaves, self:1, rate:100, study:15
