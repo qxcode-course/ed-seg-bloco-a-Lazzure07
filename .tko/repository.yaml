@@ -19,19 +19,19 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@rec
 - ed@vector
 - ed@map_set
-- ed@list
+- ed@rec
 - ed@backtrack
+- ed@list
 flags:
   inbox: all
-  panel: skills
+  panel: graph
   task_graph_mode: executions
   show_time: 'true'
 audit:
   enabled: false
   interval_seconds: null
 lang: go
-selected: ed@wordsearch
-selected_index: 56
+selected: ed@lista_d3
+selected_index: 48
