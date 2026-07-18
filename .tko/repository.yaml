@@ -19,19 +19,17 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@vector
-- ed@map_set
 - ed@rec
-- ed@backtrack
 - ed@list
+- ed@dfs
 flags:
   inbox: all
-  panel: graph
+  panel: logs
   task_graph_mode: executions
   show_time: 'true'
 audit:
   enabled: false
   interval_seconds: null
 lang: go
-selected: ed@lista_d3
-selected_index: 48
+selected: ed@editorint
+selected_index: 32

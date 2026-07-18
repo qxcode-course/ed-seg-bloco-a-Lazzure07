@@ -108,13 +108,17 @@ func main() {
 }
 
 func reverse(lla *LList)*LList {
-	llv := NewLList()
-
-	for node := lla.root.prev; node != lla.root; node = node.prev {
-		llv.PushBack(node.Value)
+	if lla == nil{
+		return nil
 	}
 
-	return llv
+	node := lla.root.next
+	for node != node.root{
+		node.prev, node.next = node.next, node.prev
+		node = node.prev
+	}
+	lla.root.prev, lla.root.next = lla.root.next, lla.root.prev
+	return lla
 }
 
 func addsorted(lla *LList, value int) {
